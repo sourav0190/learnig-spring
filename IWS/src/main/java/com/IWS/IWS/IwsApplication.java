@@ -13,14 +13,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IwsApplication {
 
-	public static void main(String[] args) {
-		Student s1 =  new Student();
+    public static void main(String[] args) {
+        Student s1 = new Student();
         s1.setId(101);
         s1.setName("gotam");
         s1.setStudentClass("cse-2");
-        StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml");
+        StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
         Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
-        SessionFactory sf= meta.getSessionFactoryBuilder().build();
+        SessionFactory sf = meta.getSessionFactoryBuilder().build();
         Session session = sf.openSession();
         Transaction t = session.beginTransaction();
 
@@ -30,8 +30,6 @@ public class IwsApplication {
         sf.close();
         session.close();
 
-
-
-	}
+    }
 
 }
