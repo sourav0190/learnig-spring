@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Finder</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Find Square of a Number</h2>
+
+    <form action="sq.jsp" method="get">
+        Enter Number:
+        <input type="number" name="num" required>
+        <br><br>
+        <input type="submit" value="Find Square">
+    </form>
+
+</body>
+</html>
