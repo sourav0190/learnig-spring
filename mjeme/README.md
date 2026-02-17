@@ -1,38 +1,66 @@
 # Banking Portal (mjeme)
 
-A Spring Boot application for a Banking Portal system.
+## 📌 Project Overview
+**mjeme** is a robust **Banking Portal** application built with Spring Boot. It provides a secure and user-friendly platform for essential banking operations. The system is designed to handle user accounts, secure transactions, and administrative tasks, all wrapped in a responsive web interface served by Thymeleaf.
 
-## Project Description
-This application provides core banking functionalities including user management, account handling, and transaction processing. It is built using modern Java technologies and follows a standard layered architecture.
+## 🚀 Key Features
+- **User Authentication**: Secure login and registration using Spring Security.
+- **Account Management**: Create, update, and view bank account details.
+- **Transaction Processing**: Secure fund transfers, deposits, and withdrawals.
+- **Role-Based Access Control (RBAC)**: Distinct features for Admins, Tellers, and Customers.
+- **Data Validation**: Comprehensive input validation to ensure data integrity.
 
-## Tech Stack
-- **Java**: 17
-- **Spring Boot**: 3.2.3
-- **Database**: H2 (In-memory, for development/runtime)
-- **Security**: Spring Security
-- **Template Engine**: Thymeleaf
-- **Build Tool**: Maven
+## 🛠 Tech Stack
+| Component | Technology | Version |
+|-----------|------------|---------|
+| **Language** | Java | 17 |
+| **Framework** | Spring Boot | 3.2.3 |
+| **Security** | Spring Security | 6.x |
+| **Frontend** | Thymeleaf, HTML5, CSS3 | - |
+| **Database** | H2 (In-memory) | Runtime |
+| **Utilities** | Lombok | Latest |
+| **Build Tool** | Maven | 3.x |
 
-## Features
-- User Authentication & Authorization
-- Account Management
-- Secure Transactions
-- Web Interface using Thymeleaf
-
-## Getting Started
+## ⚙️ Setup & Installation
 
 ### Prerequisites
-- Java 17 or higher
-- Maven
+- **Java Development Kit (JDK) 17** or higher.
+- **Maven** installed.
 
-### Running the Application
-1. Clone the repository.
-2. Navigate to the `mjeme` directory.
-3. Run the application using Maven:
+### Installation Steps
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd learnig-spring/mjeme
+   ```
+
+2. **Build the Project**
+   ```bash
+   ./mvnw clean package
+   ```
+
+3. **Run the Application**
    ```bash
    ./mvnw spring-boot:run
    ```
-   (Or `mvn spring-boot:run` if you have Maven installed globally)
 
-### Accessing the Application
-Once the application is running, you can access it at `http://localhost:8080`.
+4. **Access the Portal**
+   Open your browser and navigate to:
+   ```
+   http://localhost:8080
+   ```
+   *Default Login Credentials (if applicable, check `SecurityConfig.java` or database initialization scripts).*
+
+## 📂 Project Structure
+```
+mjeme/
+├── src/
+│   ├── main/
+│   │   ├── java/com/banking/       # Controllers, Services, Entities
+│   │   └── resources/
+│   │       ├── templates/          # Thymeleaf HTML views
+│   │       └── static/             # CSS, JS, Images
+│   └── test/                       # Security and Service tests
+├── pom.xml                         # Dependencies (Spring Security, Data JPA, etc.)
+└── README.md                       # Project documentation
+```
