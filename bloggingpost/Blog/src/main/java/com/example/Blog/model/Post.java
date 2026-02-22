@@ -2,7 +2,7 @@ package com.example.Blog.model;
 
 import jakarta.persistence.*;
 
-import javax.xml.crypto.Data;
+
 import java.time.LocalDateTime;
 
 @Entity
